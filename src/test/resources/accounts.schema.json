@@ -1,37 +1,37 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "тип": "массив",
-  "по умолчанию": [],
-  "элементы": {
-    "тип": "объект",
+  "type": "array",
+  "default": [],
+  "items": {
+    "type": "object",
     "additionalProperties": false,
-    "требуется": [
+    "required": [
       "id",
-      "имя",
-      "число",
-      "баланс",
-      "валюта"
+      "name",
+      "number",
+      "balance",
+      "currency"
     ],
-    "свойства": {
+    "properties": {
       "id": {
-        "тип": "целоечисло"
+        "type": "integer"
       },
-      "имя": {
-        "тип": "строка",
+      "name": {
+        "type": "string",
         "minLength": 1
       },
-      "номер": {
-        "тип": "строка",
+      "number": {
+        "type": "string",
         "pattern": "^•• \\d{4}$"
       },
-      "баланс": {
-        "тип": "целоечисло",
-        "по умолчанию": 0
+      "balance": {
+        "type": "integer",
+        "default": 0
       },
-      "валюта": {
-        "тип": "строка",
+      "currency": {
+        "type": "string",
+        "pattern": "^(RUB)|(RUR)$"
         "pattern": "^(RUB)|(USD)$"
       }
     }
   }
-}
